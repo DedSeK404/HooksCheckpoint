@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -10,7 +9,7 @@ export function Search({handelSName, handelRate}) {
     <p style={{color:"#e50814", fontSize:"30px"}}>Search By Name</p>
      <InputGroup  className="mb-3">
         <Form.Control onChange={(e) => handelSName(e.target.value)} style={{borderRadius:"0%"}}
-          placeholder="Search By Name"
+          placeholder="Type Movie Name"
           aria-label="Recipient's username"
           aria-describedby="basic-addon2"
           
@@ -22,7 +21,7 @@ export function Search({handelSName, handelRate}) {
       <p style={{color:"#e50814", fontSize:"30px"}}>Search By Rating</p>
       <InputGroup className="mb-3">
         <Form.Control style={{borderRadius:"0%"}}
-          placeholder="Search By Rating"
+          placeholder="Type Movie Rating"
           aria-label="Recipient's username"
           aria-describedby="basic-addon2"
           type='number'
@@ -39,4 +38,3 @@ export function Search({handelSName, handelRate}) {
     </div>
   );
 }
-
