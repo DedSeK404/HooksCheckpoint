@@ -1,5 +1,5 @@
 import { MovieCard } from "./MovieCard";
-import { useState } from "react";
+
 
 export const MovieList = ({ data ,search, searchRate}) => {
  
