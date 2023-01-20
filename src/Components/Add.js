@@ -8,7 +8,7 @@ import Card from 'react-bootstrap/Card';
 
 
 
-export function Add() {
+export function Add({handelAdd}) {
  
 
   const [name, setName] = useState("")
@@ -16,20 +16,20 @@ export function Add() {
   const [imgUrl, setImgUrl] = useState("")
   const [rating, setRating] = useState("")
   
-  const[list,setList]=useState([])
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name,description,imgUrl,rating)
     const data={name,description,imgUrl,rating}
     if(name&&description&&imgUrl&&rating){
-      setList((ls)=>[...ls,data])
+      // setList((ls)=>[...ls,data])
       setName("")
       setDescription("")
       setImgUrl("")
       setRating("")
     }
-    
+    handelAdd(data)
   }
   const [search, setSearch] = useState("");
   return (
@@ -54,7 +54,7 @@ export function Add() {
         </div>
       <button style={{width:"100%"}} className="btn_add" >Add Movie</button>
       </form>
-      <input
+      {/* <input
         style={{width:"100%"}}
         name="name"
         onChange={(e) => setSearch(e.target.value)}
@@ -84,8 +84,8 @@ export function Add() {
       </ListGroup>
       <Button style={{borderRadius:"0%"}} variant="danger">Watch Movie</Button>
     </Card>
-          </div>)
-      }
+          </div>) */}
+      {/* } */}
     </div>
    
   );
