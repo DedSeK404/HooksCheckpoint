@@ -33,16 +33,24 @@ function App() {
     <Header/>
     <Container >
       <div>
+        <Row>
+        <Col className="c" sm={12}>
+        <Search handelSName={handelSName} handelRate={handelRate} />
+        </Col>
+        </Row>
       <Row >
-        <Col style={{display:'flex',flexWrap:"wrap",padding:"20px",gap:"10px"}}  className="a" sm={12}>
+       
+        <Col style={{display:'flex',flexWrap:"wrap",padding:"20px",gap:"10px"}}  className="a" sm={8}>
         <MovieList data={list} search={search} searchRate={searchRate}/>
+        
+        </Col>
+        <Col className="b" sm={4}>
         <Add handelAdd={handelAdd}/>
         </Col>
         
-        
       </Row>
       </div>
-     <Search handelSName={handelSName} handelRate={handelRate} />
+    
     </Container>
     <Footer/>
     </div>
